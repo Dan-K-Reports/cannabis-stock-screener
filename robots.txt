@@ -1,0 +1,10 @@
+# robots.txt for stonks.silentmajority420.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://stonks.silentmajority420.com/sitemap.xml
+
+# Crawl-delay (optional, be nice to servers)
+Crawl-delay: 1
