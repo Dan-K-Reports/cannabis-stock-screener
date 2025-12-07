@@ -1,10 +1,10 @@
-# robots.txt for stonks.silentmajority420.com
+# robots.txt for stonks.dankreports.com
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://stonks.silentmajority420.com/sitemap.xml
+Sitemap: https://stonks.dankreports.com/sitemap.xml
 
 # Crawl-delay (optional, be nice to servers)
 Crawl-delay: 1
