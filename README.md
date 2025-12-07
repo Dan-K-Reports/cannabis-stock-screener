@@ -3,7 +3,6 @@
 **Exposing the mispricing between US MSOs and Canadian LPs**
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![CBDT Framework](https://img.shields.io/badge/CBDT%20Framework-r%3D0.968-brightgreen)](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/MDVDTQ)
 
 ## The Problem
 
@@ -19,7 +18,7 @@ This screener helps investors identify which companies *actually* benefit from r
 
 ## Live Site
 
-**[stonks.silentmajority420.com](https://stonks.silentmajority420.com)**
+**[stonks.dankreports.com](https://stonks.dankreports.com)**
 
 ## Features
 
@@ -52,8 +51,6 @@ The Consumer-Driven Black Market Displacement Theory is a validated predictive f
 - Mean Absolute Error: 5%
 - Directional Accuracy: 87.5% (21/24)
 
-**Published:** [Harvard Dataverse DOI:10.7910/DVN/MDVDTQ](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/MDVDTQ)
-
 ## Tech Stack
 
 - Vanilla HTML/CSS/JavaScript
@@ -65,7 +62,7 @@ The Consumer-Driven Black Market Displacement Theory is a validated predictive f
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/stonks.git
+git clone https://github.com/Dan-K-Reports/stonks.git
 cd stonks
 
 # Serve locally (Python)
@@ -91,27 +88,20 @@ This is a static site. Deploy to:
 - Market data compiled from public sources (Yahoo Finance, company filings)
 - 280E burden estimates based on reported EBITDA and industry tax analysis
 - State footprints from company investor presentations and 10-K filings
-- CBDT scores from [The Silent Majority 420](https://silentmajority420.com) validated framework
+- CBDT scores from validated framework developed by Daniel Kief
 
 ## Disclaimer
 
 This tool is for informational purposes only. Not financial advice. Data may be delayed or inaccurate. Always conduct your own due diligence before making investment decisions.
 
-## Related Resources
-
-- [The Silent Majority 420](https://silentmajority420.com) - Cannabis policy analysis
-- [CBDT Framework](https://cbdttheory.com) - Full methodology documentation
-- [Schedule 3 & SAFE Banking Coverage](https://www.silentmajority420.com/tag/schedule-3-safe-banking/)
-- [State-by-State Analysis](https://www.silentmajority420.com/tag/state-analysis/)
-
 ## License
 
 Content and data licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-CBDT Framework © The Silent Majority 420. Published via Harvard Dataverse.
+CBDT Framework developed by Daniel Kief.
 
 ## Author
 
-**The Silent Majority 420**
-- Website: [silentmajority420.com](https://silentmajority420.com)
-- ORCID: [0009-0003-6779-9910](https://orcid.org/0009-0003-6779-9910)
+**Daniel Kief**
+- Website: [dankreports.com](https://www.dankreports.com)
+- Email: [danielkreports@gmail.com](mailto:danielkreports@gmail.com)
