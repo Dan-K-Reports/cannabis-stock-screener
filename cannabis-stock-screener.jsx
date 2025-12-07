@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { TrendingUp, TrendingDown, DollarSign, Building2, Leaf, AlertTriangle, ChevronDown, ChevronUp, ExternalLink, Filter, ArrowUpDown, MapPin, Scale, Zap, Info, X } from 'lucide-react';
 
-// CBDT Framework State Data - from your validated 24-state dataset
+// CBDT Framework State Data - from validated 24-state dataset
 const CBDT_STATE_DATA = {
   'Oregon': { rank: 1, deltaU: 3.43, predicted: 97, observed: 82, tercile: 'Top' },
   'Colorado': { rank: 2, deltaU: 3.15, predicted: 96, observed: 84, tercile: 'Top' },
@@ -941,7 +941,7 @@ const InfoModal = ({ isOpen, onClose }) => {
           <div className="space-y-4 text-sm text-gray-300">
             <p>
               The <strong className="text-emerald-400">Consumer-Driven Black Market Displacement Theory (CBDT)</strong> is a 
-              proprietary framework developed by The Silent Majority 420 for predicting legal cannabis market share.
+              proprietary framework developed by Daniel Kief for predicting legal cannabis market share.
             </p>
             
             <div className="bg-gray-800/50 rounded-lg p-4 font-mono text-xs">
@@ -968,12 +968,11 @@ const InfoModal = ({ isOpen, onClose }) => {
                 <li>• Correlation r = 0.968 across 24 states</li>
                 <li>• Mean Absolute Error: 5%</li>
                 <li>• Directional Accuracy: 87.5% (21/24)</li>
-                <li>• Published via Harvard Dataverse (DOI:10.7910/DVN/MDVDTQ)</li>
               </ul>
             </div>
             
             <p className="text-gray-500 text-xs">
-              Learn more at <a href="https://silentmajority420.com" className="text-emerald-400 hover:underline">silentmajority420.com</a>
+              Learn more at <a href="https://www.dankreports.com" className="text-emerald-400 hover:underline">dankreports.com</a>
             </p>
           </div>
         </div>
@@ -1062,7 +1061,7 @@ export default function CannabisStockScreener() {
                 <h1 className="text-3xl font-bold bg-gradient-to-r from-emerald-400 to-green-300 bg-clip-text text-transparent">
                   STONKS
                 </h1>
-                <p className="text-xs text-gray-500">stonks.silentmajority420.com</p>
+                <p className="text-xs text-gray-500">stonks.dankreports.com</p>
               </div>
             </div>
             
@@ -1093,7 +1092,7 @@ export default function CannabisStockScreener() {
           </div>
           
           <p className="text-gray-400 max-w-3xl">
-            Cannabis stock screener with <a href="https://www.silentmajority420.com/tag/schedule-3-safe-banking/" target="_blank" rel="noopener noreferrer" className="text-emerald-400 font-medium hover:text-emerald-300 underline decoration-emerald-600/50 hover:decoration-emerald-400 transition-colors">280E / SAFE Banking impact analysis</a> and 
+            Cannabis stock screener with 280E / SAFE Banking impact analysis and 
             state-level market scoring using the validated CBDT Framework (r=0.968). US MSOs benefit from federal reform. Canadian LPs do not.
           </p>
         </div>
@@ -1126,15 +1125,11 @@ export default function CannabisStockScreener() {
         <div className="mt-12 pt-8 border-t border-gray-800/60 text-center">
           <p className="text-xs text-gray-600">
             Data for informational purposes only. Not financial advice. 
-            CBDT Framework © The Silent Majority 420. Published via Harvard Dataverse (CC BY 4.0).
+            CBDT Framework developed by Daniel Kief (CC BY 4.0).
           </p>
           <div className="mt-2 flex items-center justify-center gap-4 text-xs">
-            <a href="https://silentmajority420.com" className="text-emerald-500 hover:text-emerald-400">
-              silentmajority420.com
-            </a>
-            <span className="text-gray-700">•</span>
-            <a href="https://cbdttheory.com" className="text-emerald-500 hover:text-emerald-400">
-              cbdttheory.com
+            <a href="https://www.dankreports.com" className="text-emerald-500 hover:text-emerald-400">
+              dankreports.com
             </a>
           </div>
         </div>
