@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Largest Cannabis Companies by Market Cap (2026) | Cannabis Stock Screener | STONKS</title>
-    <meta name="description" content="The largest cannabis companies ranked by live market cap, updated daily. Compare the biggest US MSOs (Curaleaf, Green Thumb, Trulieve) and Canadian LPs (Tilray, Canopy) with 280E tax and SAFE Banking reform-impact scoring and BMDE state-level analysis.">
-    <meta name="keywords" content="largest cannabis companies, biggest cannabis companies by market cap, biggest marijuana stocks, top cannabis stocks 2026, largest MSO, biggest US cannabis companies, cannabis stocks, MSO stocks, Canadian LP, 280E tax, SAFE Banking, Trulieve, Curaleaf, Green Thumb, Tilray, Canopy Growth, BMDE">
+    <title>Largest Cannabis Companies by Revenue (2026) | Cannabis Stock Screener | STONKS</title>
+    <meta name="description" content="The largest cannabis companies ranked by annual revenue. Compare the biggest US MSOs (Curaleaf, Green Thumb, Trulieve) and Canadian LPs (Tilray, Canopy) with live prices, 280E tax and SAFE Banking reform-impact scoring and BMDE state-level analysis.">
+    <meta name="keywords" content="largest cannabis companies by revenue, biggest cannabis companies, biggest marijuana stocks, top cannabis stocks 2026, largest MSO, biggest US cannabis companies, cannabis stocks, MSO stocks, Canadian LP, 280E tax, SAFE Banking, Trulieve, Curaleaf, Green Thumb, Tilray, Canopy Growth, BMDE">
     <meta name="author" content="Daniel Kief">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://stonks.dankreports.com/">
@@ -19,8 +19,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://stonks.dankreports.com/">
-    <meta property="og:title" content="Largest Cannabis Companies by Market Cap (2026) | Cannabis Stock Screener">
-    <meta property="og:description" content="The biggest cannabis companies ranked by live market cap, updated daily. US MSOs vs Canadian LPs with 280E/SAFE Banking reform-impact analysis.">    <meta property="og:image" content="https://stonks.dankreports.com/og-image.jpg">
+    <meta property="og:title" content="Largest Cannabis Companies by Revenue (2026) | Cannabis Stock Screener">
+    <meta property="og:description" content="The biggest cannabis companies ranked by annual revenue, with live prices. US MSOs vs Canadian LPs with 280E/SAFE Banking reform-impact analysis.">    <meta property="og:image" content="https://stonks.dankreports.com/og-image.jpg">
     <meta property="og:site_name" content="Dan K Reports">
     
     <!-- Twitter -->
@@ -100,7 +100,7 @@
             "Canadian LP reform exposure warnings",
             "BMDE state-level scoring",
             "Reform upside multiple calculations",
-            "Market cap and financial filtering",
+            "Revenue and financial filtering",
             "State footprint visualization"
           ],
           "screenshot": "https://stonks.dankreports.com/og-image.jpg"
@@ -182,10 +182,10 @@
             },
             {
               "@type": "Question",
-              "name": "What is the largest cannabis company by market cap?",
+              "name": "What is the largest cannabis company by revenue?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The largest publicly traded cannabis companies by market capitalization are US Multi-State Operators (MSOs), led by Curaleaf and Green Thumb Industries, followed by Trulieve and Verano among the major plant-touching operators. This screener ranks every company by live market cap updated daily, so the exact order reflects current market data rather than a fixed snapshot. Sort the screener by market cap to see the current ranking of the biggest cannabis companies."
+                "text": "The largest publicly traded cannabis companies by annual revenue are US Multi-State Operators (MSOs), led by Curaleaf and Green Thumb Industries, followed by Trulieve and Verano among the major plant-touching operators. This screener ranks every company by annual revenue, a stable measure of operating scale, and shows live share prices alongside each company. Sort the screener by revenue to see the current ranking of the biggest cannabis companies."
               }
             },
             {
@@ -193,7 +193,7 @@
               "name": "What is the biggest US cannabis MSO?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Among US Multi-State Operators (MSOs), Curaleaf and Green Thumb Industries are consistently the two largest by market cap and revenue, with Trulieve, Verano, and Cresco Labs rounding out the top tier. Unlike Canadian Licensed Producers, these US MSOs operate state-licensed plant-touching businesses and carry 280E federal tax exposure, which is why federal reform matters far more to their valuations. Use the 'US MSOs Only' filter and sort by market cap to rank them."
+                "text": "Among US Multi-State Operators (MSOs), Curaleaf and Green Thumb Industries are consistently the two largest by revenue, with Trulieve, Verano, and Cresco Labs rounding out the top tier. Unlike Canadian Licensed Producers, these US MSOs operate state-licensed plant-touching businesses and carry 280E federal tax exposure, which is why federal reform matters far more to their valuations. Use the 'US MSOs Only' filter and sort by revenue to rank them."
               }
             }
           ]
@@ -884,9 +884,9 @@
         ];
 
         // Helper functions
-        const formatMarketCap = (mcap) => {
-            if (mcap >= 1000) return `$${(mcap / 1000).toFixed(1)}B`;
-            return `$${mcap}M`;
+        const formatRevenue = (rev) => {
+            if (rev >= 1000) return `$${(rev / 1000).toFixed(2)}B`;
+            return `$${rev}M`;
         };
 
         const calculateBMDEScore = (states) => {
@@ -953,7 +953,6 @@
         const StockCard = ({ stock, livePrice, expanded, onToggle }) => {
             const bmdeScore = calculateBMDEScore(stock.states);
             const reformMultiple = getReformImpactMultiple(stock);
-            const effectiveMarketCap = (livePrice && livePrice.marketCap > 0) ? livePrice.marketCap : stock.marketCap;
             
             return (
                 <div className="bg-gradient-to-br from-gray-900/95 via-gray-900/90 to-gray-950/95 border border-gray-700/50 rounded-xl overflow-hidden hover:border-gray-600/60 transition-all duration-300 shadow-xl shadow-black/20">
@@ -995,12 +994,12 @@
                                         <div className="text-xs text-gray-500">
                                             {(livePrice.changePercent || 0) >= 0 ? '▲' : '▼'} ${Math.abs(livePrice.change || 0).toFixed(2)} today
                                         </div>
-                                        <div className="text-xs text-gray-400 mt-0.5">{formatMarketCap(effectiveMarketCap)} <span className="text-gray-600">mkt cap</span></div>
+                                        <div className="text-xs text-gray-400 mt-0.5">{formatRevenue(stock.revenue)} <span className="text-gray-600">revenue</span></div>
                                     </div>
                                 ) : (
                                     <div className="text-right">
-                                        <div className="text-lg sm:text-xl font-bold text-gray-100 font-mono">{formatMarketCap(effectiveMarketCap)}</div>
-                                        <div className="text-xs text-gray-500">Market Cap</div>
+                                        <div className="text-lg sm:text-xl font-bold text-gray-100 font-mono">{formatRevenue(stock.revenue)}</div>
+                                        <div className="text-xs text-gray-500">Annual Revenue</div>
                                     </div>
                                 )}
                                 <svg className={`w-5 h-5 text-gray-500 transition-transform ${expanded ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1055,8 +1054,8 @@
                             
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
                                 <div className="bg-gray-800/40 rounded-lg p-3">
-                                    <div className="text-xs text-gray-500 mb-1">Market Cap</div>
-                                    <div className="text-lg font-bold text-gray-100">{formatMarketCap((livePrice && livePrice.marketCap > 0) ? livePrice.marketCap : stock.marketCap)}</div>
+                                    <div className="text-xs text-gray-500 mb-1">Annual Revenue</div>
+                                    <div className="text-lg font-bold text-gray-100">{formatRevenue(stock.revenue)}</div>
                                 </div>
                                 <div className="bg-gray-800/40 rounded-lg p-3">
                                     <div className="text-xs text-gray-500 mb-1">EBITDA Margin</div>
@@ -1187,14 +1186,10 @@
 
         // Stats Header
         const StatsHeader = ({ stocks, livePrices = {} }) => {
-            const effMcap = (s) => {
-                const live = livePrices[s.ticker] && livePrices[s.ticker].marketCap;
-                return (live && live > 0) ? live : s.marketCap;
-            };
             const usMSOs = stocks.filter(s => s.type === 'US MSO');
             const canadianLPs = stocks.filter(s => s.type === 'Canadian LP');
             const total280eBurden = usMSOs.reduce((acc, s) => acc + (s.estimated280eTaxBurden || 0), 0);
-            const totalMarketCap = stocks.reduce((acc, s) => acc + effMcap(s), 0);
+            const totalRevenue = stocks.reduce((acc, s) => acc + (s.revenue || 0), 0);
             
             return (
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
@@ -1217,9 +1212,9 @@
                     </div>
                     
                     <div className="bg-gradient-to-br from-blue-950/30 to-indigo-950/20 border border-blue-800/30 rounded-xl p-4">
-                        <div className="text-xs text-blue-400 mb-1">📈 Total Market Cap</div>
-                        <div className="text-2xl font-bold text-gray-100">{formatMarketCap(totalMarketCap)}</div>
-                        <div className="text-xs text-gray-500">Combined coverage</div>
+                        <div className="text-xs text-blue-400 mb-1">📈 Total Revenue</div>
+                        <div className="text-2xl font-bold text-gray-100">{formatRevenue(totalRevenue)}</div>
+                        <div className="text-xs text-gray-500">Combined annual</div>
                     </div>
                 </div>
             );
@@ -1265,16 +1260,16 @@
                     </div>
                     
                     <div>
-                        <label className="text-xs text-gray-500 mb-1 block">Market Cap</label>
+                        <label className="text-xs text-gray-500 mb-1 block">Revenue Size</label>
                         <select 
-                            value={filters.marketCap}
-                            onChange={(e) => setFilters({...filters, marketCap: e.target.value})}
+                            value={filters.revenueSize}
+                            onChange={(e) => setFilters({...filters, revenueSize: e.target.value})}
                             className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-200 focus:outline-none focus:border-emerald-500"
                         >
                             <option value="all">All Sizes</option>
-                            <option value="large">Large ($1B+)</option>
-                            <option value="mid">Mid ($200M-$1B)</option>
-                            <option value="small">Small (&lt;$200M)</option>
+                            <option value="large">Large ($500M+)</option>
+                            <option value="mid">Mid ($100M-$500M)</option>
+                            <option value="small">Small (&lt;$100M)</option>
                         </select>
                     </div>
                     
@@ -1285,7 +1280,6 @@
                             onChange={(e) => setFilters({...filters, sortBy: e.target.value})}
                             className="w-full bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-200 focus:outline-none focus:border-emerald-500"
                         >
-                            <option value="marketCap">Market Cap</option>
                             <option value="revenue">Revenue</option>
                             <option value="280eBurden">280E Burden</option>
                             <option value="ebitda">EBITDA Margin</option>
@@ -1300,8 +1294,8 @@
             const [filters, setFilters] = useState({
                 type: 'all',
                 tax280e: 'all',
-                marketCap: 'all',
-                sortBy: 'marketCap'
+                revenueSize: 'all',
+                sortBy: 'revenue'
             });
             const [expandedStock, setExpandedStock] = useState(null);
             const [showInfo, setShowInfo] = useState(false);
@@ -1326,7 +1320,7 @@
                 const tickers = CANNABIS_STOCKS.map(s => s.ticker);
                 
                 try {
-                    // Fetch prices + company profile (market cap) with small delays to avoid rate limits
+                    // Fetch live prices with small delays to avoid rate limits
                     for (const ticker of tickers) {
                         try {
                             // --- Quote (live price) ---
@@ -1350,26 +1344,6 @@
                                         prevClose: data.pc || 0
                                     };
                                 }
-                            }
-                            
-                            // --- Profile2 (market cap + shares outstanding, updates ~daily) ---
-                            try {
-                                const profileRes = await fetch(
-                                    `${FINNHUB_BASE_URL}/stock/profile2?symbol=${ticker}&token=${FINNHUB_API_KEY}`
-                                );
-                                if (profileRes.ok) {
-                                    const p = await profileRes.json();
-                                    // marketCapitalization is in millions USD; shareOutstanding in millions
-                                    if (p && p.marketCapitalization && p.marketCapitalization > 0) {
-                                        prices[ticker] = {
-                                            ...(prices[ticker] || {}),
-                                            marketCap: Math.round(p.marketCapitalization),
-                                            sharesOutstanding: p.shareOutstanding || 0
-                                        };
-                                    }
-                                }
-                            } catch (err) {
-                                console.warn(`Failed to fetch profile for ${ticker}:`, err);
                             }
                             
                             // Small delay between requests
@@ -1403,12 +1377,6 @@
             const filteredStocks = useMemo(() => {
                 let result = [...CANNABIS_STOCKS];
                 
-                // Effective market cap: prefer live Finnhub value, fall back to static
-                const effMcap = (s) => {
-                    const live = livePrices[s.ticker] && livePrices[s.ticker].marketCap;
-                    return (live && live > 0) ? live : s.marketCap;
-                };
-                
                 if (filters.type !== 'all') {
                     result = result.filter(s => s.type === filters.type);
                 }
@@ -1417,20 +1385,18 @@
                     result = result.filter(s => s.tax280eExposure === filters.tax280e);
                 }
                 
-                if (filters.marketCap !== 'all') {
-                    if (filters.marketCap === 'large') {
-                        result = result.filter(s => effMcap(s) >= 1000);
-                    } else if (filters.marketCap === 'mid') {
-                        result = result.filter(s => effMcap(s) >= 200 && effMcap(s) < 1000);
-                    } else if (filters.marketCap === 'small') {
-                        result = result.filter(s => effMcap(s) < 200);
+                if (filters.revenueSize !== 'all') {
+                    if (filters.revenueSize === 'large') {
+                        result = result.filter(s => s.revenue >= 500);
+                    } else if (filters.revenueSize === 'mid') {
+                        result = result.filter(s => s.revenue >= 100 && s.revenue < 500);
+                    } else if (filters.revenueSize === 'small') {
+                        result = result.filter(s => s.revenue < 100);
                     }
                 }
                 
                 result.sort((a, b) => {
                     switch (filters.sortBy) {
-                        case 'marketCap':
-                            return effMcap(b) - effMcap(a);
                         case 'revenue':
                             return b.revenue - a.revenue;
                         case '280eBurden':
@@ -1442,7 +1408,7 @@
                         case 'ebitda':
                             return b.ebitdaMargin - a.ebitdaMargin;
                         default:
-                            return effMcap(b) - effMcap(a);
+                            return b.revenue - a.revenue;
                     }
                 });
                 
@@ -1504,18 +1470,18 @@
 
                             {/* SEO: Largest Cannabis Companies section */}
                             <div className="mt-6 max-w-3xl">
-                                <h2 className="text-xl font-bold text-gray-100 mb-2">Largest Cannabis Companies by Market Cap (2026)</h2>
+                                <h2 className="text-xl font-bold text-gray-100 mb-2">Largest Cannabis Companies by Revenue (2026)</h2>
                                 <p className="text-gray-400 text-sm leading-relaxed mb-2">
-                                    This is a live ranking of the largest publicly traded cannabis companies by market capitalization, updated daily from market data. 
-                                    Sort the screener below by market cap to see the biggest marijuana stocks ranked in order — from US multi-state operators (MSOs) 
+                                    This is a ranking of the largest publicly traded cannabis companies by annual revenue. 
+                                    Sort the screener below by revenue to see the biggest marijuana stocks ranked in order — from US multi-state operators (MSOs) 
                                     like <strong className="text-gray-300">Curaleaf, Green Thumb Industries, and Trulieve</strong> to Canadian licensed producers (LPs) 
-                                    like <strong className="text-gray-300">Tilray and Canopy Growth</strong>.
+                                    like <strong className="text-gray-300">Tilray and Canopy Growth</strong>. Live share prices update throughout the trading day.
                                 </p>
                                 <p className="text-gray-400 text-sm leading-relaxed">
-                                    Unlike static “biggest cannabis companies” lists, this screener ranks every company on live market cap and adds the analysis that 
-                                    actually matters for valuation: which operators benefit from federal reform. US MSOs carry 280E tax exposure and stand to gain billions 
-                                    from Schedule III rescheduling and SAFE Banking — Canadian LPs do not. Use the sort and filters to compare the top cannabis stocks by 
-                                    size, revenue, EBITDA margin, and reform upside.
+                                    Unlike static “biggest cannabis companies” lists, this screener ranks every company on revenue — a stable measure of operating 
+                                    scale — and adds the analysis that actually matters for valuation: which operators benefit from federal reform. US MSOs carry 280E tax 
+                                    exposure and stand to gain billions from Schedule III rescheduling and SAFE Banking — Canadian LPs do not. Use the sort and filters to 
+                                    compare the top cannabis stocks by revenue, EBITDA margin, 280E burden, and reform upside.
                                 </p>
                             </div>
                         </div>
