@@ -20,12 +20,6 @@ This screener helps investors identify which companies *actually* benefit from r
 
 This tool is for informational purposes only. Not financial advice. Data may be delayed or inaccurate. Always conduct your own due diligence before making investment decisions.
 
-## License
-
-Content and data licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-
-CBDT Framework developed by Daniel Kief.
-
 ## Author
 
 **Daniel Kief**
