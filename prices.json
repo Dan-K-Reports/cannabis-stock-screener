@@ -1,0 +1,237 @@
+{
+  "generatedAt": "2026-10-26T21:03:07+00:00",
+  "quotes": {
+    "AAWH": {
+      "change": -0.0119,
+      "changePercent": -2.92,
+      "close": 0.3961,
+      "marketCap": 80.5,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -0.56
+    },
+    "ACB": {
+      "change": 0.02,
+      "changePercent": 0.52,
+      "close": 3.9,
+      "marketCap": 246.9,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -0.61
+    },
+    "CBWTF": {
+      "change": 0.03,
+      "changePercent": 1.26,
+      "close": 2.42,
+      "marketCap": 249.8,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": 0.17,
+      "trailingPE": 14.24
+    },
+    "CGC": {
+      "change": -0.0079,
+      "changePercent": -1.17,
+      "close": 0.6681,
+      "marketCap": 300.2,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -0.45
+    },
+    "CRLBF": {
+      "change": 0.0167,
+      "changePercent": 2.78,
+      "close": 0.6167,
+      "marketCap": 228.3,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -0.38
+    },
+    "CRON": {
+      "change": -0.04,
+      "changePercent": -1.19,
+      "close": 3.31,
+      "marketCap": 1219.4,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": 0.19,
+      "trailingPE": 17.42
+    },
+    "CURLF": {
+      "change": 0.12,
+      "changePercent": 1.52,
+      "close": 8.0,
+      "marketCap": 2118.9,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -0.14
+    },
+    "DBCCF": {
+      "change": -0.008,
+      "changePercent": -0.62,
+      "close": 1.292,
+      "marketCap": 49.7,
+      "session": "2026-10-23",
+      "stale": false,
+      "trailingEps": -0.11
+    },
+    "GLAS": {
+      "change": 0.0,
+      "changePercent": 0.0,
+      "close": 2.14,
+      "marketCap": 201.7,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -0.74
+    },
+    "GRUSF": {
+      "change": -0.01,
+      "changePercent": -2.86,
+      "close": 0.34,
+      "marketCap": 85.0,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -0.02
+    },
+    "GTBIF": {
+      "change": 0.02,
+      "changePercent": 0.32,
+      "close": 6.36,
+      "marketCap": 1390.2,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": 0.54,
+      "trailingPE": 11.78
+    },
+    "HITI": {
+      "change": 0.0,
+      "changePercent": 0.0,
+      "close": 2.59,
+      "marketCap": 230.9,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -0.31
+    },
+    "INCR": {
+      "change": -0.26,
+      "changePercent": -5.74,
+      "close": 4.27,
+      "marketCap": 64.1,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -0.95
+    },
+    "JUSH": {
+      "change": 0.008,
+      "changePercent": 1.63,
+      "close": 0.5,
+      "marketCap": 99.8,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -0.36
+    },
+    "MRMD": {
+      "change": -0.0023,
+      "changePercent": -4.34,
+      "close": 0.0507,
+      "marketCap": 20.5,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -0.04
+    },
+    "OGI": {
+      "change": 0.013,
+      "changePercent": 1.4,
+      "close": 0.939,
+      "marketCap": 135.4,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": 0.43,
+      "trailingPE": 2.18
+    },
+    "PLNH": {
+      "change": -0.006,
+      "changePercent": -6.32,
+      "close": 0.089,
+      "marketCap": 29.8,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -0.2
+    },
+    "RYM": {
+      "change": 0.58,
+      "changePercent": 3.7,
+      "close": 16.27,
+      "marketCap": 35.0,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -10.45
+    },
+    "SNDL": {
+      "change": -0.02,
+      "changePercent": -1.55,
+      "close": 1.27,
+      "marketCap": 312.6,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -0.06
+    },
+    "TLRY": {
+      "change": -0.09,
+      "changePercent": -3.2,
+      "close": 2.72,
+      "marketCap": 402.0,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -1.41
+    },
+    "TRLV": {
+      "change": 0.4,
+      "changePercent": 3.84,
+      "close": 10.82,
+      "marketCap": 2083.6,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -2.43
+    },
+    "TSNDF": {
+      "change": 0.0128,
+      "changePercent": 2.75,
+      "close": 0.4778,
+      "marketCap": 178.1,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -0.11
+    },
+    "VFF": {
+      "change": -0.035,
+      "changePercent": -1.36,
+      "close": 2.54,
+      "marketCap": 310.6,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": 0.18,
+      "trailingPE": 14.11
+    },
+    "VREOF": {
+      "change": -0.18,
+      "changePercent": -2.2,
+      "close": 7.99,
+      "marketCap": 418.0,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -1.7
+    },
+    "VRNO": {
+      "change": -0.03,
+      "changePercent": -0.6,
+      "close": 4.97,
+      "marketCap": 363.9,
+      "session": "2026-10-26",
+      "stale": false,
+      "trailingEps": -3.53
+    }
+  },
+  "session": "2026-10-26",
+  "source": "Yahoo Finance via yfinance"
+}
